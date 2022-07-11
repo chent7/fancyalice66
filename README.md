@@ -1,2 +1,2 @@
 # fancyalice66
-QMK/VIA firmware
+QMK/VIA firmware w/ encoder support
