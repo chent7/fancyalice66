@@ -5,29 +5,23 @@
 
 #include "config_common.h"
 
-/* USB Device descriptor parameter */
 #define VENDOR_ID       0xECED
 #define PRODUCT_ID      0x3663
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Fancytech
 #define PRODUCT         FancyAlice66
 
-/* key matrix size */
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 16
-
-/* key matrix pins */
 #define MATRIX_ROW_PINS { F4, F5, F6, F7, C7 }
 #define MATRIX_COL_PINS { C6, E6, B5, B4, D7, D6, D4, D5, D3, D2, D1, D0, B7, B3, B2, B1 }
-
-/* COL2ROW or ROW2COL */
+#define UNUSED_PINS
 #define DIODE_DIRECTION ROW2COL
 
-/* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
+#define USB_POLLING_INTERVAL_MS 1
 #define FORCE_NKRO
 
-/* Encoder */
 #define ENCODERS 1
 #define ENCODERS_PAD_A { F0 }
 #define ENCODERS_PAD_B { F1 }
@@ -35,14 +29,13 @@
 #define ENCODERS_CCW_KEY { {11,4} }
 #define ENCODER_RESOLUTION  2
 
-/* RGB Matrix config */
 #define RGB_DI_PIN B0
 
 #ifdef RGB_MATRIX_ENABLE
+
     #define DRIVER_LED_TOTAL 82
     #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200
 
-    /* RGB Matrix effect */
     #define ENABLE_RGB_MATRIX_ALPHAS_MODS
     #define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
     #define ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
@@ -84,4 +77,5 @@
     #define ENABLE_RGB_MATRIX_MULTISPLASH
     #define ENABLE_RGB_MATRIX_SOLID_SPLASH
     #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+
 #endif

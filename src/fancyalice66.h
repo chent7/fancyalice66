@@ -17,7 +17,6 @@
 #pragma once
 
 #include "quantum.h"
-#include "encoder_actions.h"
 
 #define XXX KC_NO
 
@@ -48,3 +47,7 @@
     { K30, K31, K32, K33, K34, K35, XXX, K37, K38, K39, K3A, K3B, K3C, XXX, K3E, XXX }, \
     { K40, XXX, K42, K43, XXX, XXX, K46, K47, XXX, XXX, K4A, K4B, K4C, K4D, K4E, K4F }  \
 }
+
+void encoder_action_unregister(void);
+
+void encoder_action_register(uint8_t index, bool clockwise);
